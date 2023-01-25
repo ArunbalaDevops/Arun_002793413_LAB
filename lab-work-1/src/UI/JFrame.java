@@ -5,6 +5,7 @@
 package UI;
 
 import Model.Address;
+import Model.Contact;
 import Model.Person;
 import javax.swing.JOptionPane;
 
@@ -34,6 +35,7 @@ public class JFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollBar1 = new javax.swing.JScrollBar();
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
         firstName = new javax.swing.JLabel();
@@ -57,6 +59,22 @@ public class JFrame extends javax.swing.JFrame {
         zipcode = new javax.swing.JLabel();
         fieldZipcode = new javax.swing.JTextField();
         save = new javax.swing.JButton();
+        permanentAddress = new javax.swing.JLabel();
+        personalContact = new javax.swing.JLabel();
+        officeContact = new javax.swing.JLabel();
+        officePhone = new javax.swing.JLabel();
+        officeEmail = new javax.swing.JLabel();
+        officeFieldPhone = new javax.swing.JTextField();
+        officeFieldEmail = new javax.swing.JTextField();
+        currentAddress = new javax.swing.JLabel();
+        currentStreetName = new javax.swing.JLabel();
+        currentApt = new javax.swing.JLabel();
+        currentCity = new javax.swing.JLabel();
+        currentZipcode = new javax.swing.JLabel();
+        fieldCurrentStreetName = new javax.swing.JTextField();
+        fieldCurrentApt = new javax.swing.JTextField();
+        fieldCurrentCity = new javax.swing.JTextField();
+        fieldCurrentZipcode = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         viewFname = new javax.swing.JLabel();
         viewLname = new javax.swing.JLabel();
@@ -69,6 +87,14 @@ public class JFrame extends javax.swing.JFrame {
         viewCity = new javax.swing.JLabel();
         viewZipCode = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        viewOfficePhone = new javax.swing.JLabel();
+        viewOfficeEmail = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        viewCurrentStreetName = new javax.swing.JLabel();
+        viewCurrentApt = new javax.swing.JLabel();
+        viewCurrentCity = new javax.swing.JLabel();
+        viewCurrentZipcode = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -163,65 +189,160 @@ public class JFrame extends javax.swing.JFrame {
             }
         });
 
+        permanentAddress.setText("Permanent Address");
+
+        personalContact.setText("Personal Contact");
+
+        officeContact.setText("Office Contact");
+
+        officePhone.setText("Phone No:");
+
+        officeEmail.setText("Email ID:");
+
+        officeFieldPhone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                officeFieldPhoneActionPerformed(evt);
+            }
+        });
+
+        officeFieldEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                officeFieldEmailActionPerformed(evt);
+            }
+        });
+
+        currentAddress.setText("Current Address");
+
+        currentStreetName.setText("Street Name:");
+
+        currentApt.setText("Apt:");
+
+        currentCity.setText("City:");
+
+        currentZipcode.setText("Zipcode:");
+
+        fieldCurrentStreetName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldCurrentStreetNameActionPerformed(evt);
+            }
+        });
+
+        fieldCurrentApt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldCurrentAptActionPerformed(evt);
+            }
+        });
+
+        fieldCurrentCity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldCurrentCityActionPerformed(evt);
+            }
+        });
+
+        fieldCurrentZipcode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldCurrentZipcodeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(personalContact)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(officeContact)
+                .addGap(79, 79, 79))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(permanentAddress)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(currentAddress)
+                .addGap(88, 88, 88))
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
+                        .addComponent(nuid))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(firstName)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(fieldFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(collegeName)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(fieldCollegeName))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(lastName)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(phone)
-                                            .addComponent(nuid)
-                                            .addComponent(email))))
+                                    .addComponent(firstName))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(fieldLastName, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                                    .addComponent(fieldFirstName)
+                                    .addComponent(fieldNuid)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(collegeName)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fieldCollegeName, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(phone)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(fieldPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(email)
+                                .addGap(18, 18, 18)
+                                .addComponent(fieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(fieldStreetName)
-                                    .addComponent(fieldLastName)
-                                    .addComponent(fieldNuid)
-                                    .addComponent(fieldPhone)
-                                    .addComponent(fieldEmail)
+                                    .addComponent(zipcode)
+                                    .addComponent(city)
+                                    .addComponent(apt)
+                                    .addComponent(streetName))
+                                .addGap(3, 3, 3)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(fieldStreetName, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(fieldApt, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(fieldCity, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(fieldZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(officeEmail)
+                                .addGap(18, 18, 18)
+                                .addComponent(officeFieldEmail))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(officePhone)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(officeFieldPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(save)
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(fieldApt, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(fieldCity)
-                                                .addComponent(fieldZipcode, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)))
-                                        .addGap(0, 0, Short.MAX_VALUE))))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(streetName))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(apt))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(city))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(zipcode)))
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(currentApt)
+                                            .addComponent(currentCity)
+                                            .addComponent(currentZipcode))
+                                        .addGap(29, 29, 29)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(fieldCurrentApt, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                                            .addComponent(fieldCurrentCity)
+                                            .addComponent(fieldCurrentZipcode)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(currentStreetName)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(fieldCurrentStreetName)))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(save, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(168, 168, 168))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(34, 34, 34)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(firstName)
                     .addComponent(fieldFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -229,39 +350,61 @@ public class JFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lastName)
                     .addComponent(fieldLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nuid)
                     .addComponent(fieldNuid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(collegeName)
                     .addComponent(fieldCollegeName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(phone)
-                    .addComponent(fieldPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(personalContact)
+                    .addComponent(officeContact))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(phone)
+                        .addComponent(fieldPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(officePhone)
+                        .addComponent(officeFieldPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(email)
-                    .addComponent(fieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(fieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(officeEmail)
+                    .addComponent(officeFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(permanentAddress)
+                    .addComponent(currentAddress))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldStreetName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(streetName)
-                    .addComponent(fieldStreetName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(currentStreetName)
+                    .addComponent(fieldCurrentStreetName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(apt)
-                    .addComponent(fieldApt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(fieldApt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(currentApt)
+                    .addComponent(fieldCurrentApt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(city)
-                    .addComponent(fieldCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(fieldCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(currentCity)
+                    .addComponent(fieldCurrentCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(zipcode)
-                    .addComponent(fieldZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(fieldZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(currentZipcode)
+                    .addComponent(fieldCurrentZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16)
                 .addComponent(save)
                 .addContainerGap())
         );
@@ -292,6 +435,18 @@ public class JFrame extends javax.swing.JFrame {
 
         jLabel1.setText("H   U   S   K   Y        C   A   R   D");
 
+        jLabel2.setText("Permanent Address:");
+
+        jLabel3.setText("Current Address:");
+
+        viewCurrentStreetName.setText("jLabel4");
+
+        viewCurrentApt.setText("jLabel4");
+
+        viewCurrentCity.setText("jLabel4");
+
+        viewCurrentZipcode.setText("jLabel4");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -300,43 +455,66 @@ public class JFrame extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(viewCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(74, 74, 74)
-                        .addComponent(viewZipCode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(viewCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(74, 74, 74)
+                                .addComponent(viewZipCode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(viewStreetName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(62, 62, 62)
+                                .addComponent(viewApt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(12, 12, 12))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(viewCollegeName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(111, 111, 111))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(viewNuid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(111, 111, 111))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(viewFname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(40, 40, 40)
+                                .addComponent(viewLname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(34, 34, 34)))
+                        .addGap(127, 127, 127))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(viewStreetName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(62, 62, 62)
-                        .addComponent(viewApt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(12, 12, 12))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(viewPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(viewEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(137, 137, 137)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(viewOfficePhone, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(viewOfficeEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(viewEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(111, 111, 111))
+                        .addGap(183, 183, 183)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(viewPhone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(111, 111, 111))
+                        .addGap(57, 57, 57)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(viewCollegeName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(111, 111, 111))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(viewNuid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(111, 111, 111))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(viewFname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(40, 40, 40)
-                        .addComponent(viewLname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(34, 34, 34)))
-                .addGap(127, 127, 127))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(viewCurrentStreetName, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(viewCurrentCity, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(116, 116, 116)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(viewCurrentApt, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(viewCurrentZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(13, 13, 13)
                 .addComponent(jLabel1)
-                .addGap(19, 19, 19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(viewFname)
                     .addComponent(viewLname))
@@ -345,10 +523,16 @@ public class JFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(viewCollegeName)
                 .addGap(18, 18, 18)
-                .addComponent(viewPhone)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(viewPhone)
+                    .addComponent(viewOfficePhone))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(viewEmail)
-                .addGap(32, 32, 32)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(viewEmail)
+                    .addComponent(viewOfficeEmail))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2)
+                .addGap(4, 4, 4)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(viewStreetName)
                     .addComponent(viewApt))
@@ -356,7 +540,17 @@ public class JFrame extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(viewCity)
                     .addComponent(viewZipCode))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(viewCurrentStreetName)
+                    .addComponent(viewCurrentApt))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(viewCurrentCity)
+                    .addComponent(viewCurrentZipcode))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         jSplitPane1.setRightComponent(jPanel2);
@@ -377,28 +571,47 @@ public class JFrame extends javax.swing.JFrame {
         String lname = fieldLastName.getText();
         String nuid0 = fieldNuid.getText();
         String coName = fieldCollegeName.getText();
-        String pho = fieldPhone.getText();
-        String em = fieldEmail.getText();
+        long personalPhone = Long.valueOf(fieldPhone.getText());
+        long officePhone = Long.valueOf(officeFieldPhone.getText());
+        String personalEmail = fieldEmail.getText();
+        String officeEmail = officeFieldEmail.getText();
         String streetnm = fieldStreetName.getText();
         String ap = fieldApt.getText();
         String ci = fieldCity.getText();
         String zip = fieldZipcode.getText();
+        String streetnm1 = fieldCurrentStreetName.getText();
+        String ap1 = fieldCurrentApt.getText();
+        String ci1 = fieldCurrentCity.getText();
+        String zip1 = fieldCurrentZipcode.getText();
 
         this.person.setFirstName(fname);
         this.person.setLastName(lname);
         this.person.setNuid(nuid0);
         this.person.setCollegeName(coName);
-        this.person.setPhone(pho);
-        this.person.setEmailid(em);
 
-        Address address = this.person.getAddress();
-        address.setStreetName(streetnm);
-        address.setApt(ap);
-        address.setCity(ci);
-        address.setZipcode(zip);
 
-        JOptionPane.showMessageDialog(null, "SAVED SUCCESSFULLY");
+        Address permanentAddress = this.person.getPermanentAddress();
+        permanentAddress.setStreetName(streetnm);
+        permanentAddress.setApt(ap);
+        permanentAddress.setCity(ci);
+        permanentAddress.setZipcode(zip);
         
+        Address currentAddress = this.person.getCurrentAddress();
+        currentAddress.setStreetName(streetnm1);
+        currentAddress.setApt(ap1);
+        currentAddress.setCity(ci1);
+        currentAddress.setZipcode(zip1);
+        
+        Contact personalContact = this.person.getPersonalContact();
+        personalContact.setPhoneNo(personalPhone);
+        personalContact.setEmailId(personalEmail);
+        
+        Contact officeContact = this.person.getOfficeContact();
+        officeContact.setPhoneNo(officePhone);
+        officeContact.setEmailId(officeEmail);
+        
+        JOptionPane.showMessageDialog(null, "Creating Husky Card");
+
         display();
 
 
@@ -409,12 +622,19 @@ public class JFrame extends javax.swing.JFrame {
         viewLname.setText(this.person.getLastName());
         viewNuid.setText(this.person.getNuid());
         viewCollegeName.setText(this.person.getCollegeName());
-        viewPhone.setText(this.person.getPhone());
-        viewEmail.setText(this.person.getEmailid());
-        viewStreetName.setText(this.person.getAddress().getStreetName());
-        viewApt.setText(this.person.getAddress().getApt());
-        viewCity.setText(this.person.getAddress().getCity());
-        viewZipCode.setText(this.person.getAddress().getZipcode());
+        viewPhone.setText(String.valueOf(this.person.getPersonalContact().getPhoneNo()));
+        viewEmail.setText(this.person.getPersonalContact().getEmailId());
+        viewOfficePhone.setText(String.valueOf(this.person.getOfficeContact().getPhoneNo()));
+        viewOfficeEmail.setText(this.person.getOfficeContact().getEmailId());
+        viewStreetName.setText(this.person.getPermanentAddress().getStreetName());
+        viewApt.setText(this.person.getPermanentAddress().getApt());
+        viewCity.setText(this.person.getPermanentAddress().getCity());
+        viewZipCode.setText(this.person.getPermanentAddress().getZipcode());
+        viewCurrentStreetName.setText(this.person.getCurrentAddress().getStreetName());
+        viewCurrentApt.setText(this.person.getCurrentAddress().getApt());
+        viewCurrentCity.setText(this.person.getCurrentAddress().getCity());
+        viewCurrentZipcode.setText(this.person.getCurrentAddress().getZipcode());
+        
     }
     private void fieldLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldLastNameActionPerformed
         // TODO add your handling code here:
@@ -451,6 +671,30 @@ public class JFrame extends javax.swing.JFrame {
     private void fieldZipcodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldZipcodeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldZipcodeActionPerformed
+
+    private void officeFieldPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_officeFieldPhoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_officeFieldPhoneActionPerformed
+
+    private void officeFieldEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_officeFieldEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_officeFieldEmailActionPerformed
+
+    private void fieldCurrentStreetNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldCurrentStreetNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldCurrentStreetNameActionPerformed
+
+    private void fieldCurrentAptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldCurrentAptActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldCurrentAptActionPerformed
+
+    private void fieldCurrentCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldCurrentCityActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldCurrentCityActionPerformed
+
+    private void fieldCurrentZipcodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldCurrentZipcodeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldCurrentZipcodeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -491,10 +735,19 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JLabel apt;
     private javax.swing.JLabel city;
     private javax.swing.JLabel collegeName;
+    private javax.swing.JLabel currentAddress;
+    private javax.swing.JLabel currentApt;
+    private javax.swing.JLabel currentCity;
+    private javax.swing.JLabel currentStreetName;
+    private javax.swing.JLabel currentZipcode;
     private javax.swing.JLabel email;
     private javax.swing.JTextField fieldApt;
     private javax.swing.JTextField fieldCity;
     private javax.swing.JTextField fieldCollegeName;
+    private javax.swing.JTextField fieldCurrentApt;
+    private javax.swing.JTextField fieldCurrentCity;
+    private javax.swing.JTextField fieldCurrentStreetName;
+    private javax.swing.JTextField fieldCurrentZipcode;
     private javax.swing.JTextField fieldEmail;
     private javax.swing.JTextField fieldFirstName;
     private javax.swing.JTextField fieldLastName;
@@ -504,21 +757,37 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JTextField fieldZipcode;
     private javax.swing.JLabel firstName;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JLabel lastName;
     private javax.swing.JLabel nuid;
+    private javax.swing.JLabel officeContact;
+    private javax.swing.JLabel officeEmail;
+    private javax.swing.JTextField officeFieldEmail;
+    private javax.swing.JTextField officeFieldPhone;
+    private javax.swing.JLabel officePhone;
+    private javax.swing.JLabel permanentAddress;
+    private javax.swing.JLabel personalContact;
     private javax.swing.JLabel phone;
     private javax.swing.JButton save;
     private javax.swing.JLabel streetName;
     private javax.swing.JLabel viewApt;
     private javax.swing.JLabel viewCity;
     private javax.swing.JLabel viewCollegeName;
+    private javax.swing.JLabel viewCurrentApt;
+    private javax.swing.JLabel viewCurrentCity;
+    private javax.swing.JLabel viewCurrentStreetName;
+    private javax.swing.JLabel viewCurrentZipcode;
     private javax.swing.JLabel viewEmail;
     private javax.swing.JLabel viewFname;
     private javax.swing.JLabel viewLname;
     private javax.swing.JLabel viewNuid;
+    private javax.swing.JLabel viewOfficeEmail;
+    private javax.swing.JLabel viewOfficePhone;
     private javax.swing.JLabel viewPhone;
     private javax.swing.JLabel viewStreetName;
     private javax.swing.JLabel viewZipCode;

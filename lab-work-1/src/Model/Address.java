@@ -14,6 +14,13 @@ public class Address {
     String apt;
     String city;
     String zipcode;
+    
+    public Address(){
+        this.streetName="";
+        this.apt="";
+        this.city="";
+        this.zipcode="";
+    }
 
     public String getStreetName() {
         return streetName;

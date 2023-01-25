@@ -14,9 +14,44 @@ public class Person {
     String firstName;
     String lastName;
     String collegeName;
-    String phone;
-    String emailid;
-    Address address;
+
+    Address permanentAddress;
+    Address currentAddress;
+
+    Contact personalContact;
+    Contact officeContact;
+
+    public Address getPermanentAddress() {
+        return permanentAddress;
+    }
+
+    public void setPermanentAddress(Address permanentAddress) {
+        this.permanentAddress = permanentAddress;
+    }
+
+    public Address getCurrentAddress() {
+        return currentAddress;
+    }
+
+    public void setCurrentAddress(Address currentAddress) {
+        this.currentAddress = currentAddress;
+    }
+
+    public Contact getPersonalContact() {
+        return personalContact;
+    }
+
+    public void setPersonalContact(Contact personalContact) {
+        this.personalContact = personalContact;
+    }
+
+    public Contact getOfficeContact() {
+        return officeContact;
+    }
+
+    public void setOfficeContact(Contact officeContact) {
+        this.officeContact = officeContact;
+    }
 
     public String getNuid() {
         return nuid;
@@ -50,59 +85,28 @@ public class Person {
         this.collegeName = collegeName;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getEmailid() {
-        return emailid;
-    }
-
-    public void setEmailid(String emailid) {
-        this.emailid = emailid;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-    
-    public Person(){
+    public Person() {
         this.firstName = "";
         this.lastName = "";
         this.collegeName = "";
-        this.emailid = "";
         this.nuid = " ";
-        this.phone = "";
-        this.address = new Address();
-    }
-    
-    public static void main(String args[]){
-        Person obj = new Person();
         
+        this.permanentAddress = new Address();
+        this.currentAddress = new Address();
+        
+        this.personalContact = new Contact();
+        this.officeContact = new Contact();
+
+    }
+
+    public static void main(String args[]) {
+        Person obj = new Person();
+
         obj.setFirstName("Arun");
         obj.setLastName("Balasubramanian");
         obj.setCollegeName("COE");
-        obj.setNuid("002793413");
-        obj.setPhone("2065718239");
-        obj.setEmailid("balasubramanian.ar@northeastern.edu");
-        
-        
-        Address currentaddr = obj.getAddress();
-        currentaddr.setStreetName("Hill side street");
-        
-        Address permanentaddr = obj.getAddress();
-        permanentaddr.setStreetName("Hill side street");
-        
-        
-        
+        obj.setNuid("3413");
+
     }
 
 }
